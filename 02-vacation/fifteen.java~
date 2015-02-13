@@ -1,0 +1,38 @@
+import java.util.*;
+import java.io.*;
+
+
+public class fifteen {
+
+    JPanel play;
+    JButton grid;
+
+    public fifteen() {
+	gridMaker();
+    }
+
+    public void buttonMaker(int x, int y) {
+	grid[x][y] = new JButton();  
+	grid[x][y].setPreferredSize(new Dimension(125,125));
+        grid[x][y].setContentAreaFilled(false);
+	grid[x][y].setBackground(Color.WHITE);
+	play.add(grid[x][y]);
+    }
+
+    public void gridMaker() {	
+
+	play = new JPanel(new GridLayout(5,9)); 
+	grid = new JButton[9][5];
+	int counterX = 0;
+	int counterY = 0;
+	for (int y = 0; y < 5; y++){
+	    for (int x = 0; x < 9; x++){
+		buttonMaker(x, y);
+	    }
+	}
+	gameBoard.add(play);
+    }
+
+    public static void main(String[] args) {
+	fifteen f = new fifteen();
+}
