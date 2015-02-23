@@ -58,6 +58,7 @@ public class Fifteen2 {
 	    }
 	}
     }
+    /*
 
     public boolean issolvable() {
 
@@ -65,7 +66,7 @@ public class Fifteen2 {
 
     public void solve() {
     }
-
+    */
     public static void main(String[] args) {
 	Fifteen2 f = new Fifteen2();
 	System.out.println(f);
