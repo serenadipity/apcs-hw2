@@ -4,6 +4,9 @@ import java.util.*;
 public class MergeSort {
 
     private ArrayList<Integer> deck;
+    private Random random = new Random();
+    
+    
     /*
 
        merge sort(deck) 
@@ -18,5 +21,5 @@ public class MergeSort {
     */
 
     public ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b){
-	
+        
     }
