@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class LakeMake {
+
+    private Random random = new Random();
+    private int[][] board;
+    private int maxX;
+    private int maxY;
+
+    public LakeMake() {
+	this(4,6);
+    }
+
+    public LakeMake(int row, int col,) {
+	this.maxX=col;
+	this.maxY=row;
+	board = new int[row][col];
+	for (int r=0; r < row; r++) {
+	    for (int c=0; c < col; c++) {
+		board[r][c] = randInt.nextInt(30) + 10;
+	    }
+	}
+    }
+
+    public String toString() {
+	String s = "";
+        for (int r=0; r < row; r++) {
+	    for (int c=0; c < col; c++) {
+		s += board[r][c] + " ";
+	    }
+	    s += "\n";
+	}
+	return s;
+    }
+
+    public static void main(String[] args) {
+	LakeMake k = new LakeMake();
+	System.out.println(k);
+    }
+}
