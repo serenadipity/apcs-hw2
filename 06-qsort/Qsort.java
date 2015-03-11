@@ -55,24 +55,22 @@ public class Qsort{
 	}
 	return (wall+rwall)/2;
     }
+		
+		
+    public int select(int[] A, int k, int l,int h){
+	int pivot = partition(A, l, h);
+	int pivot2 = A[pivot];
 
-		
-		
-    public int qselect(int[] a, int k, int l, int h){
-	int pi,pval;
-	pi = partition(a,l,h);
-	pval = a[pi];
-	if (k==pi)
-	    return pval;
-	else if (k > pi)
-	    return qsort(a,k,pi+1,h);
-	else
-	    return qsort(a,k,l,pi-1);
-    }
-		
-    public int select(int k){
-	b = Arrays.copyOf(a,a.length);
-	return qsort(b,k,0,b.length-1);
+	if (pivot > k) {
+	    return select(A,k,l,pivot-1);
+	}
+	else if(pivot < k) {
+	    return select(A,k,pivot+1,h);
+	}
+	else {
+	    return -1;
+	}
+			      
     }
 		
     public static void main(String[] args) {
