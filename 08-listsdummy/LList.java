@@ -17,7 +17,7 @@ public class LList{
 	return s;
     }
 
-    public Node find(int n) {
+    public Node get(int n) {
 	Node nd = l;
 	while (n > 0) {
 	    nd = nd.getNext();
@@ -26,7 +26,7 @@ public class LList{
 	return nd;
     }
 
-    public void insert(int n, String s) {
+    public void add(int n, String s) {
         if (n==0) {
 	    add(s);
 	}
@@ -40,4 +40,21 @@ public class LList{
 	    tmp.setNext(tmp2);
 	}
     }
+
+    public void add(int n, String s) {
+	Node k = new Node(s);
+	k.setNext(get(n));
+	n--;
+	get(n).setNext(k);
+    }
+
+    public void remove(int n) {
+	Node tmp = l;
+	for (int i=0; i<n; i++) {
+	    tmp = tmp.getNext();
+	}
+	tmp.setNext(tmp.getNext().getNext());
+    }
+
+    public int find
 }

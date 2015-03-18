@@ -14,5 +14,8 @@ public class Driver{
 	System.out.println(l);
 	l.insert(4,"d");
 	System.out.println(l);
+	l.remove(2);
+	System.out.println(l);
+       
     }
 }
