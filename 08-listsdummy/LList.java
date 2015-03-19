@@ -1,5 +1,6 @@
 public class LList{
-    private Node l=null;
+    private Node l = new Node(0);
+    
 
     public void add(String s){
 	Node tmp = new Node(s);
@@ -26,7 +27,7 @@ public class LList{
 	return nd;
     }
 
-    public void insert(int n, String s) {
+    public void insert(int n, int s) {
         if (n==0) {
 	    add(s);
 	}
@@ -39,5 +40,18 @@ public class LList{
 	    tmp2.setNext(tmp.getNext());
 	    tmp.setNext(tmp2);
 	}
+    }
+
+    public boolean remove(int i) {
+	Node tmp = l;
+	for (int n = 0; n < length; n++) {
+	    if (tmp.getNext().getData() == i) {
+		Node tmp2 = tmp.getNext();
+		tmp.setNext(tmp2.getNext());
+		return true;
+	    }
+	    tmp = tmp.getNext();
+	}
+	return false;
     }
 }
