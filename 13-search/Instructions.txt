@@ -1,0 +1,9 @@
+1. Best first search
+   Priority = estimate t.exit
+   (1.Euclidian dist 2. Manhattan dist)
+   --> implement add/remove as priority queue
+   --> modify node t.add priority
+
+2. A*
+   Priority = # of steps(track this in node) so far + estimate to exit
+   
