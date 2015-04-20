@@ -1,32 +1,51 @@
-
 public class Node {
-		private int x,y;
-		private Node prev;
-		
-		public Node(int x, int y){
-				this.x = x;
-				this.y = y;
-		}
+    
+    private int x, y, priority;
+    private Node next;
+    private Node previous;
 
-		public Node getPrev() {
-				return prev;
-		}
+    public Node() {
+    
+    }
 
-		public void setPrev(Node n){
-				prev = n;
-		}
-		
-		public int getX() {
-				return x;
-		}
+    public Node(int xcor, int ycor, int p) {
+	x = xcor;
+	y = ycor;
+	priority = p;
+    }
+   
+    public String toString() {
+	return "" + x + ", " + y + " - " + priority;    
+    }
 
-		public int getY() {
-				return y;
-		}
-		
+    public void setNext(Node n) {
+	next = n;
+    }
+    
+    public Node getNext() {
+	return next;
+    }
+    
+    public void setPrevious(Node n) {
+	previous = n;
+    }
+    
+    public Node getPrevious() {
+	return previous;
+    }
+    
+    public int getX() {
+	return x;
+    }
+
+    public int getY() {
+	return y;
+    }
+    
+    public int getPriority() {
+	return priority;
+    }
 }
-
-
 
 
 
