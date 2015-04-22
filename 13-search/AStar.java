@@ -118,7 +118,7 @@ public class AStar {
     
     public static void main(String[] args) {
         AStar z = new AStar();
-        System.out.println(z);
+	System.out.println(z);
         
         String s = z.aStar();
 	System.out.println(z);

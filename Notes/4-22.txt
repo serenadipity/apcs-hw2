@@ -1,0 +1,26 @@
+Definitions:
+
+graphs --> a collection of nodes and edges
+(vertex)node --> holds stuff
+edge --> connects stuff
+
+Cyclic Graph --> can get back to node w/o retracing steps)
+Acyclic Graph --> (can't get back to node w/o retracing steps)
+
+Directed Graph --> waiting for next step
+
+DAG --> Directed Acyclic Graph
+
+Trees --> empty or an acyclic graph with one node designated as the root
+root --> starting point
+child(and parent)--> connected to end 1 level down from its parent node
+leaf --> a node with 0 children
+path --> the sequence of nodes and of edges connecting 2 nodes
+ancestors --> any nodes on the path from you up to the root
+descendants --> any nodes on your subtrees
+siblings --> children of the same parent
+height --> the length of the longest path to the root
+fullness --> full tree has the maximum number of nodes
+balance --> 
+
+binary tree --> each node has 0, 1, or 2 children
