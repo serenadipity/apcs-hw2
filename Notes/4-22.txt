@@ -24,3 +24,33 @@ fullness --> full tree has the maximum number of nodes
 balance --> 
 
 binary tree --> each node has 0, 1, or 2 children
+
+Binary Search Tree:
+       Binary tree where given the value V in any node n, all the values in n's
+       left subtree are less than v and all the values in n's right subtree are
+       greater than V.
+
+public Node search(Node T, integer i) {
+       while (T != null) {
+       	     int c = T.getData().compareTo(i);
+       	     if (c == 0) {
+       	     	return T;
+		}
+		 else if (c > 0)
+	      	       T = T.getLeft()
+        }
+	return null;
+}
+
+insert 
+       node n = new node(i);
+       if (T==null) {
+       	  T = n;
+	  return T;
+	}
+___________________________________________________________________
+insert as a new leaf
+1. set to to root
+2. search for n but use a piggyback pointer T2 to follow T.
+3. T2 now points to the new node's parent
+4. Insert the new node to the left or right of T2 as appropriate.
