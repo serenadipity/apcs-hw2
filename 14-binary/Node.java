@@ -1,6 +1,7 @@
 public class Node {
 
     public Node(){
+	
     }
 
     public Node(int i){
